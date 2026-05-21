@@ -1,0 +1,16 @@
+import pandas as pd
+# Load dataset
+df = pd.read_csv("students_scores.csv")
+# 1. Display first 5 rows
+print("First 5 rows of dataset:")
+print(df.head())
+# 2. Check data types of all columns
+print("\nData types of columns:")
+print(df.dtypes)
+# 3. Find missing values in each column
+print("\nMissing values in each column:")
+print(df.isnull().sum())
+# 4. Students with attendance below 70%
+print("\nStudents with attendance below 70%:")
+low_attendance = df[df["attendance"] < 70]
+print(low_attendance)
